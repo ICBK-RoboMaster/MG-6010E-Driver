@@ -11,15 +11,15 @@
 
 ## 用法
 
-1. 在`mg6010.h`中，include你所使用的hal库头文件
+1. 在`mg6010e.h`中，include你所使用的hal库头文件
 2. 如果你使用的不是can而是canfd，请自行修改相关代码，搜索“依赖HAL库“可找到与HAL库相关的代码
-3. 添加`mg6010.h`与`mg6010.c`到你的项目文件中
+3. 添加`mg6010e.h`与`mg6010e.c`到你的项目文件中
 4. 将`mg6010e_can_rx_callback_hook`放入CAN的接收回调函数中
 
 #### 初始化电机
 
 ```c
-#include "mg6010.h"
+#include "mg6010e.h"
 
 mg6010e_config_t config; // 电机配置结构体
 config.can_handle = &hcan1; // 电机所在can总线的句柄
